@@ -1,0 +1,8 @@
+---
+- name: Let sudo users run commands without typing password
+  copy:
+    src: files/no_passwd_sudo
+    dest: /etc/sudoers.d/no_passwd_sudo
+    owner: root
+    group: root
+    mode: 0440

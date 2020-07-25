@@ -1,0 +1,11 @@
+---
+- hosts: all
+  connection: local
+
+  vars_files:
+    - default.config.yml
+
+  tasks:
+    - name: Print username, homedir
+      debug:
+        msg: Local home {{ general.local_home }}, User name {{ general.user_name}}

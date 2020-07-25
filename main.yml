@@ -1,0 +1,21 @@
+---
+- hosts: all
+  connection: local
+  become: true
+
+  vars_files:
+    - default.config.yml
+
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
+
+  tasks:
+    - name: Print username, homedir
+      debug:
+        msg: Local home {{ general.local_home }}, User name {{ general.user_name}}
+    
+    - include_tasks: tasks/sudoers.yml
+    - include_tasks: tasks/install-apt-packages.yml

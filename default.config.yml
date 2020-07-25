@@ -1,0 +1,6 @@
+---
+downloads: ~/.ansible-downloads/
+
+general:
+    local_home: "{{ lookup('env','HOME') }}"
+    user_name: "{{ lookup('env', 'USER') }}"
