@@ -6,6 +6,7 @@
   - name: Install basic packages
     apt:   name={{ item }} state=latest 
     with_items:
+      - cowsay
       - vim
       - sudo
       - git

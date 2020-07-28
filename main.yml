@@ -19,3 +19,4 @@
     
     - include_tasks: tasks/sudoers.yml
     - include_tasks: tasks/install-apt-packages.yml
+    - include_tasks: tasks/snaps.yml
