@@ -4,3 +4,22 @@ downloads: ~/.ansible-downloads/
 general:
     local_home: "{{ lookup('env','HOME') }}"
     user_name: "{{ lookup('env', 'USER') }}"
+
+apt_packages:
+    - cowsay
+    - vim
+    - sudo
+    - git
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - software-properties-common
+    - git-doc
+    - git-email
+    - git-gui
+    - gitk
+    - xclip
+    - tmux
+    - tree
+    - direnv
+    - entr

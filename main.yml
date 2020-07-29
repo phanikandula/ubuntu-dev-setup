@@ -20,3 +20,11 @@
     - include_tasks: tasks/sudoers.yml
     - include_tasks: tasks/install-apt-packages.yml
     - include_tasks: tasks/snaps.yml
+
+    - name: Download files
+      get_url:
+        url: 'http://eradman.com/entrproject/scripts/reload-browser'
+        dest: /usr/local/bin/reload-browser
+        mode: '0775'
+        owner: "{{ general.user_name }}"
+        group: "{{ general.user_name }}"

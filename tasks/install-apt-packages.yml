@@ -4,23 +4,9 @@
       update_cache: yes
 
   - name: Install basic packages
-    apt:   name={{ item }} state=latest 
-    with_items:
-      - cowsay
-      - vim
-      - sudo
-      - git
-      - apt-transport-https
-      - ca-certificates
-      - curl
-      - software-properties-common
-      - git-doc
-      - git-email
-      - git-gui
-      - gitk
-      - xclip
-      - tmux
-      - tree
+    apt:
+      name: "{{ apt_packages }}"
+      state: "latest"
   
   - name: Remove useless packages from the cache
     apt:
