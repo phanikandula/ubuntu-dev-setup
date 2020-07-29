@@ -28,3 +28,8 @@
         mode: '0775'
         owner: "{{ general.user_name }}"
         group: "{{ general.user_name }}"
+
+  roles:
+    - role: geerlingguy.docker
+      docker_users:
+      - "{{ general.user_name }}"
