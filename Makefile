@@ -1,6 +1,6 @@
 install:
 	ansible-galaxy install -r requirements.yml
-	ansible-playbook -i inventory main.yml
+	ansible-playbook -i inventory main.yml -v
 
 install-become:
 	ansible-galaxy install -r requirements.yml
