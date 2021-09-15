@@ -1,6 +1,8 @@
 ---
 - name: Install packages with option --classic
-  snap:
-    name: "{{ item }}"
+  community.general.snap:
+    name: 
+      - code
+      - go
+      - dotnet-sdk
     classic: yes
-  with_items: ['code', 'pycharm-community', 'go']
