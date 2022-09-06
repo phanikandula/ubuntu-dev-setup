@@ -9,11 +9,11 @@ apt_packages:
     - cowsay
     - vim
     - sudo
-    - git
     - apt-transport-https
     - ca-certificates
-    - curl
     - software-properties-common
+    - curl
+    - git
     - git-doc
     - git-email
     - git-gui
@@ -23,3 +23,4 @@ apt_packages:
     - tree
     - direnv
     - entr
+    - snapd

@@ -4,5 +4,11 @@
     name: 
       - code
       - go
-      - dotnet-sdk
+      - multipass
+#     - dotnet-sdk
     classic: yes
+- name: Install packages without option --classic
+  community.general.snap:
+    name: 
+      - multipass
+    classic: no
